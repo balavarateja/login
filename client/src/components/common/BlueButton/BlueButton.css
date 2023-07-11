@@ -1,0 +1,9 @@
+.blue-button {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+  text-align: center;
+  color: rgb(50, 50, 168);
+}

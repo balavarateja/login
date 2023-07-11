@@ -1,0 +1,43 @@
+.h3t {
+  display: flex;
+  position: absolute;
+  width: 270px;
+  height: 77px;
+  top: 10px;
+  left: 200px;
+  top: 50px;
+  font-family: 'Inter';
+  font-weight: 600;
+  text-align: center;
+}
+
+.h4t {
+  position: absolute;
+  width: 170px;
+  height: 35px;
+  top: 100px;
+  left: 500px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+
+  color: #000000;
+}
+
+.vector3 {
+  top: 90px;
+  left: 600px;
+  position: absolute;
+}
+.vector4 {
+  top: 85px;
+  left: 700px;
+  position: absolute;
+}
+.logo {
+  position: relative;
+  max-width: 450px;
+  max-height: 90px;
+}

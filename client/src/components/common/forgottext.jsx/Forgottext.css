@@ -1,0 +1,37 @@
+.text1 {
+  top: 220px;
+  left: 390px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  position: absolute;
+  color: #000000;
+}
+.text2 {
+  top: 300px;
+  left: 370px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  position: absolute;
+}
+.text3 {
+  top: 325px;
+  left: 380px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  position: absolute;
+}
+.text4 {
+  position: absolute;
+  top: 350px;
+  left: 460px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}

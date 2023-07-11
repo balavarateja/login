@@ -1,0 +1,39 @@
+.full {
+  max-width: 1920px;
+  max-height: 1080px;
+}
+.left {
+  max-width: 960px;
+  max-height: 1080px;
+}
+.right {
+  max-width: 960px;
+  max-height: 1080px;
+}
+.t1 {
+  margin-top: 450px;
+  margin-left: 100px;
+  font-family: 'Inter';
+  font-style: normal;
+  position: absolute;
+  width: 367px;
+  height: 58px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 58px;
+  color: #000000;
+}
+.t2 {
+  font-family: 'Inter';
+  font-style: normal;
+  margin-left: 80px;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+
+  position: absolute;
+  width: 500px;
+  height: 44px;
+  top: 571px;
+}

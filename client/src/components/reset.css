@@ -1,0 +1,57 @@
+.reset {
+  display: flex;
+  position: relative;
+  max-width: 1080px;
+  max-height: 1920px;
+}
+.fstar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.btnl {
+  position: absolute;
+  left: 0%;
+  width: 40%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  color: #141212;
+
+  font-weight: bold;
+  font-size: 36px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  position: absolute;
+  width: 219px;
+  height: 65px;
+  left: 150px;
+  background: #d2cbd2;
+  border-radius: 50px;
+}
+/* .btnc {
+  position: absolute;
+  left: 0%;
+  width: 40%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  color: #141212;
+
+  font-weight: bold;
+  font-size: 36px;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: absolute;
+  width: 219px;
+  height: 65px;
+  left: 150px;
+  background: #d2cbd2;
+  border-radius: 50px;
+} */

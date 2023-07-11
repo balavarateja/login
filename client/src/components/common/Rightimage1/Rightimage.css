@@ -1,0 +1,23 @@
+.rightimage {
+  position: relative;
+  width: 960px;
+  height: 1080px;
+}
+.logo {
+  position: absolute;
+  right: 300px;
+  top: 400px;
+}
+.imageText_9 {
+  position: absolute;
+  top: 450px;
+  left: 400px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+
+  color: #423636;
+}
