@@ -11,7 +11,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-input {
+.LoginEmailInput {
   padding: 15px;
   font-family: 'Inter';
   font-style: normal;
@@ -78,14 +78,16 @@ h2 {
 }
 
 .btn3 {
-  left: 400px;
-  top: 500px;
+  position: absolute;
+  left: 300px;
+  top: 515px;
 }
 
 .btn-f {
-  top: 575px;
+  position: absolute;
+  top: 600px;
   width: 650px;
-  left: 350px;
+  left: 270px;
   border: none;
   font-family: 'Inter';
   font-style: normal;
@@ -99,3 +101,16 @@ h2 {
 
   position: absolute;
 }
+.checkbox {
+  display: flex;
+  position: absolute;
+}
+.RM {
+  position: relative;
+}
+
+/* @media screen {
+  .Login {
+    width: 45%;
+  }
+} */

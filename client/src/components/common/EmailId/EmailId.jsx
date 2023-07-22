@@ -28,7 +28,7 @@ const EmailId = (props) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(handleSubmit, onChange)}>
         <input
           className="EmailId"
           type="email"

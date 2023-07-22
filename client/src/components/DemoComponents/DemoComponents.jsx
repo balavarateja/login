@@ -5,6 +5,8 @@ import BlueButton from '../common/BlueButton/BlueButton'
 import LeftImage from '../common/LeftImage/LeftImage'
 import RightImage from '../common/RightImage/RightImage'
 import Forgottext from '../common/forgottext.jsx/Forgottext'
+import Login from '../common/Login/Login'
+import LoginN from '../common/Login/LoginN'
 
 const DemoComponents = (props) => {
   return (
@@ -20,7 +22,9 @@ const DemoComponents = (props) => {
       ></BlueButton>
       <LeftImage></LeftImage>
       <RightImage></RightImage> */}
-      <Forgottext></Forgottext>
+      {/* <Forgottext></Forgottext> */}
+      {/* <Login></Login> */}
+      <LoginN></LoginN>
     </>
   )
 }

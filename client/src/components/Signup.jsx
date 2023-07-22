@@ -100,6 +100,7 @@ const Signup = () => {
             <form onSubmit={handleSubmit}>
               {input.map((input) => (
                 <FormInput
+                  className="SignupInput"
                   key={input.id}
                   {...input}
                   value={values[input.name]}

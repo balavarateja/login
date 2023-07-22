@@ -1,14 +1,14 @@
 import React from 'react'
 import Formlogin from '../Forminput/Formlogin'
 import '../components/login.css'
-import { Link } from 'react-router-dom'
+import { Form, Link } from 'react-router-dom'
 import { useState } from 'react'
 import GreyButton from './common/GreyButton/GreyButton'
 import WhiteButton from './common/WhiteButton/WhiteButton'
 import RightImage from './common/RightImage/RightImage'
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 import LoginText from './common/loginText/LoginText'
 import LoginLogo from './common/LoginLogo/LoginLogo'
+import Login from './common/Login/Login'
 
 const Signin = () => {
   const [values, setValues] = useState({
@@ -38,17 +38,14 @@ const Signin = () => {
       pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
       required: true,
     },
-    {
-      id: 3,
-      name: 'Remember me',
-      type: 'checkbox',
-      // text: 'Remember Me',
-      // label: 'Remember me',
-      placeholder: 'Remember me',
-      required: true,
-      setVisible,
-      // input: 'remember me',
-    },
+    // {
+    //   id: 3,
+    //   name: 'Remember me',
+    //   label: 'Remember me',
+    //   type: 'checkbox',
+    //   placeholder: 'Remember me',
+    //   required: true,
+    // },
   ]
 
   const handleSubmit = (e) => {
@@ -63,14 +60,16 @@ const Signin = () => {
         <div className="left-1">
           <form onSubmit={handleSubmit}>
             <LoginLogo></LoginLogo>
-            {input.map((input) => (
+            <Login></Login>
+
+            {/* {input.map((input) => (
               <Formlogin
                 key={input.id}
                 {...input}
                 value={values[input.name]}
                 onChange={onChange}
               />
-            ))}
+            ))} */}
 
             <div className="btn3">
               <GreyButton text="Login"></GreyButton>
