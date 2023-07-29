@@ -24,7 +24,7 @@ const DemoComponents = (props) => {
       <RightImage></RightImage> */}
       {/* <Forgottext></Forgottext> */}
       {/* <Login></Login> */}
-      <LoginN></LoginN>
+      <Login></Login>
     </>
   )
 }

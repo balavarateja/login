@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import './Login.css'
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
+import axios from 'axios'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff'
-import { Icon } from 'react-icons-kit'
-import { eye } from 'react-icons-kit/ionicons/eye'
+
 import * as React from 'react'
-import Box from '@mui/material/Box'
+import GreyButton from '../GreyButton/GreyButton'
 import IconButton from '@mui/material/IconButton'
 import Input from '@mui/material/Input'
 import FilledInput from '@mui/material/FilledInput'
@@ -16,15 +15,39 @@ import InputAdornment from '@mui/material/InputAdornment'
 import FormHelperText from '@mui/material/FormHelperText'
 import FormControl from '@mui/material/FormControl'
 import TextField from '@mui/material/TextField'
-import Visibility from '@mui/icons-material/Visibility'
-import VisibilityOff from '@mui/icons-material/VisibilityOff'
 
 const Login = () => {
-  const { password, setPassword } = useState()
-  const { visible, setVisible } = useState(true)
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+  const [visible, setVisible] = useState(true)
+
+  const handleEmailId = (e) => {
+    console.log(e.target.value)
+    setEmail(e.target.value)
+  }
+  const handlepassword = (e) => {
+    setPassword(e.target.value)
+  }
 
   const handleSubmit = (event) => {
+    debugger
     event.preventDefault()
+    console.log('emaila nd password', email, password)
+    axios
+      .post('http://localhost:8000/api/users/signIn', {
+        email: email,
+        password: password,
+      })
+      .then((response) => {
+        debugger
+        console.log(response.data)
+        alert('Successfully LoggedIn')
+      })
+      .catch((err) => {
+        console.log(err)
+        console.log(err.response)
+        alert(err.response.data.error.message)
+      })
   }
   const EndAdorment = (visible, setVisible) => {
     return (
@@ -32,10 +55,10 @@ const Login = () => {
         <InputAdornment position="end">
           <div>
             <IconButton
-              // aria-label="toggle password visibility"
               onClick={handleClickShowPassword}
               onMouseDown={handleMouseDownPassword}
               edge="end"
+              className="Icon"
             >
               {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </IconButton>
@@ -45,20 +68,20 @@ const Login = () => {
     )
   }
 
-  const sxStyles = {
-    padding: '15px',
-    width: '325px',
-    height: '55px',
-    fontFamily: 'Inter',
-    fontStyle: 'normal',
-    fontWeight: 400,
-    fontSize: '24px',
-    lineHeight: '29px',
-    margin: '10px 5px 10px 5px',
-    border: '1px solid grey',
-    borderRadius: '100px',
-    color: ' #cacaca',
-  }
+  // const sxStyles = {
+  //   padding: '15px',
+  //   width: '325px',
+  //   height: '55px',
+  //   fontFamily: 'Inter',
+  //   fontStyle: 'normal',
+  //   fontWeight: 400,
+  //   fontSize: '24px',
+  //   lineHeight: '29px',
+  //   margin: '10px 5px 10px 5px',
+  //   border: '1px solid grey',
+  //   borderRadius: '100px',
+  //   color: ' #cacaca',
+  // }
 
   const [showPassword, setShowPassword] = React.useState(false)
 
@@ -77,46 +100,25 @@ const Login = () => {
             label="email"
             variant="outlined"
             type="email"
+            value={email}
+            onChange={handleEmailId}
             placeholder="User Id / Email Id"
+            required
           />
         </div>
 
-        {/* <FormControl sx={sxStyles} variant="outlined">
-          <InputLabel
-            htmlFor="outlined-adornment-password"
-            styles={{
-              border: 'hide',
-            }}
-          >
-            Password
-          </InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl> */}
         <div className="B">
           <input
             className="InputPassword"
             type={showPassword ? 'text' : 'password'}
             placeholder="Password"
+            value={password}
+            onChange={handlepassword}
+            required
             styles={{ border: 'hiddden' }}
           />
-          <IconButton className="Icon" styles={{}}>
-            <EndAdorment />
-          </IconButton>
+          {/* <IconButton className="Icon" styles={{}}></IconButton> */}
+          <EndAdorment />
         </div>
 
         <div className="checkbox">
@@ -129,6 +131,15 @@ const Login = () => {
             Remember Me
           </label>
         </div>
+        <div className="btn3">
+          <GreyButton
+            text="Login"
+            type="submit"
+            value="Login"
+            onClick={handleSubmit}
+          ></GreyButton>
+        </div>
+        <input className="btn3" type="submit" name="submit" />
       </form>
     </div>
   )

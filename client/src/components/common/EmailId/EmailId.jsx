@@ -30,7 +30,7 @@ const EmailId = (props) => {
     <>
       <form onSubmit={(handleSubmit, onChange)}>
         <input
-          className="EmailId"
+          className="ForgetEmailInput"
           type="email"
           placeholder="Email Id"
           name="Email Id"

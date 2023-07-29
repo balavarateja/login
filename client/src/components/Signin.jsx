@@ -16,7 +16,7 @@ const Signin = () => {
     password: '',
     RememberMe: '',
   })
-  const [visible, setVisible] = useState(true)
+  const [] = useState(true)
   const input = [
     {
       id: 1,
@@ -61,19 +61,6 @@ const Signin = () => {
           <form onSubmit={handleSubmit}>
             <LoginLogo></LoginLogo>
             <Login></Login>
-
-            {/* {input.map((input) => (
-              <Formlogin
-                key={input.id}
-                {...input}
-                value={values[input.name]}
-                onChange={onChange}
-              />
-            ))} */}
-
-            <div className="btn3">
-              <GreyButton text="Login"></GreyButton>
-            </div>
             <div className="btn-f">
               <Link to="/forgotpassword">
                 <WhiteButton text="Forgot Password"></WhiteButton>

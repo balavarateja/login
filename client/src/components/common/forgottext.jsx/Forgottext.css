@@ -1,6 +1,6 @@
 .text1 {
   top: 220px;
-  left: 390px;
+  left: 375px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -8,30 +8,31 @@
   position: absolute;
   color: #000000;
 }
+
 .text2 {
   top: 300px;
-  left: 370px;
+  left: 340px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 33px;
   position: absolute;
 }
 .text3 {
-  top: 325px;
-  left: 380px;
+  top: 328px;
+  left: 365px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 33px;
   position: absolute;
 }
 .text4 {
   position: absolute;
-  top: 350px;
+  top: 360px;
   left: 460px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 33px;
 }

@@ -17,7 +17,7 @@
   width: 170px;
   height: 35px;
   top: 100px;
-  left: 500px;
+  left: 470px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -29,13 +29,13 @@
 
 .vector3 {
   top: 90px;
-  left: 600px;
+  left: 570px;
   position: absolute;
   margin-bottom: 0%;
 }
 .vector4 {
   top: 85px;
-  left: 700px;
+  left: 670px;
   position: absolute;
   margin-bottom: 0%;
 }

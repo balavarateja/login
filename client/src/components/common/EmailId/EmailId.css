@@ -1,5 +1,22 @@
-.EmailId {
-  position: absolute;
+body {
+  display: flex;
+}
+.ForgetEmailInput {
+  padding: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 10px 5px 10px 5px;
+  border: 1px solid gray;
+  border-radius: 100px;
+  color: #cacaca;
   top: 500px;
-  left: 300px;
+  left: 250px;
+  width: 450px;
+  position: absolute;
+}
+.ForgetEmailInput.input {
+  width: 400px;
 }

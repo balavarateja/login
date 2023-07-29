@@ -8,6 +8,7 @@ import GreyButton from './common/GreyButton/GreyButton'
 import SignupLogo from './common/Signuplogo/SignupLogo'
 import SignupText from './common/SignupText/SignupText'
 import LeftImage from './common/LeftImage/LeftImage'
+import axios from 'axios'
 
 const Signup = () => {
   const [values, setValues] = useState({
@@ -16,12 +17,12 @@ const Signup = () => {
     emailId: '',
     password: '',
     confirmPassword: '',
-    phone: '',
+    phoneNumber: '',
   })
   const input = [
     {
       id: 1,
-      name: 'First Name',
+      name: 'firstName',
       type: 'text',
       placeholder: 'First Name',
       errorMessage:
@@ -32,7 +33,7 @@ const Signup = () => {
     },
     {
       id: 2,
-      name: 'last name',
+      name: 'lastName',
       type: 'text',
       placeholder: 'Last Name',
       errorMessage:
@@ -43,7 +44,7 @@ const Signup = () => {
     },
     {
       id: 3,
-      name: 'email',
+      name: 'emailId',
       type: 'email',
       placeholder: 'Email ID',
       errorMessage: 'Please enter a valid email address',
@@ -63,7 +64,7 @@ const Signup = () => {
     },
     {
       id: 5,
-      name: 'phone number',
+      name: 'phoneNumber',
       type: 'text',
       placeholder: 'Phone Number',
       errorMessage: 'Please enter a valid Phone Number',
@@ -74,6 +75,19 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    // axios
+    //   .post('http://localhost:8000/api/users/signup', {
+    //     values: values.input.name,
+    //   })
+    //   .then((response) => {
+    //     console.log(response.data)
+    //     alert('Successfully registered')
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //     console.log(err.response)
+    //     alert(err.response.data.error.message)
+    //   })
   }
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value })
